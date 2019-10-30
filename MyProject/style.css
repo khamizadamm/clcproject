@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: Poppins, Sans-serif;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: gray;
+	min-height: 8vh;
+}
+
+.logo {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 20px;
+	letter-spacing: 8px;
+	color: rgb(230, 255, 255);
+}
+
+.nav-links {
+	display: flex;
+	width: 500px;
+	justify-content: space-around;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: rgb(230, 255, 255);
+}
+
+.nav-links a:hover {
+	color: red;
+}
+
+.nav-links li {
+	list-style: none;
+}
+
+.toggler {
+	display: none;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 755px){
+	body {
+		overflow-x: hidden;
+	}
+
+	.toggler {
+		display: block;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 10vh;
+		right: 0px;
+		height: 92vh;
+		transform: translateX(100%);
+		background-color: gray;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.toggler div{
+	background-color: rgb(230, 255, 255);
+	width: 40px;
+	height: 8px;
+	margin: 5px;
+}
+
+.nav-active {
+	transform: translateX(0%);
+}
